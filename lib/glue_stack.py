@@ -195,6 +195,7 @@ class GlueStack(cdk.Stack):
             server_access_logs_prefix=bucket_name,
         )
         # Dynamically upload resources to the script target
+        '''
         s3_deployment.BucketDeployment(
             self,
             'DeployGlueJobScript',
@@ -203,7 +204,7 @@ class GlueStack(cdk.Stack):
             destination_bucket=bucket,
             destination_key_prefix='etl',
         )
-
+        '''
         return bucket
 
     def glue_scripts_temporary_bucket(
