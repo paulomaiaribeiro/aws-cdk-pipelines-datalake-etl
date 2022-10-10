@@ -125,7 +125,7 @@ class GlueStack(cdk.Stack):
             glue_version='2.0',
             max_retries=0,
             number_of_workers=5,
-            role='arn:aws:iam::634935009001:role/glue-role',
+            role='arn:aws:iam::431274058968:role/glue-access-role',
             worker_type='G.1X',
         )
 
@@ -156,7 +156,7 @@ class GlueStack(cdk.Stack):
             glue_version='2.0',
             max_retries=0,
             number_of_workers=5,
-            role='arn:aws:iam::634935009001:role/glue-role',
+            role='arn:aws:iam::431274058968:role/glue-access-role',
             worker_type='G.1X',
         )
 
