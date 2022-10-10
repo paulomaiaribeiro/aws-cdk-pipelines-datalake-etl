@@ -68,7 +68,7 @@ def get_local_configuration(environment: str) -> dict:
             # Important: This is used in resources that must be **globally** unique!
             # Resource names may only contain Alphanumeric and hyphens and cannot contain trailing hyphens.
             # Example: unique-identifier-data-lake
-            RESOURCE_NAME_PREFIX: 'dkblog-e2e-ETL',
+            RESOURCE_NAME_PREFIX: 'cdkdatalake',
         },
         DEV: {
             ACCOUNT_ID: '431274058968',

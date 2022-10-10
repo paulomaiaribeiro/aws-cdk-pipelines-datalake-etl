@@ -90,12 +90,6 @@ class GlueStack(cdk.Stack):
             s3_kms_key,
             access_logs_bucket
         )
-        glue_role = self.get_role(
-            target_environment,
-            logical_id_prefix,
-            resource_name_prefix,
-            s3_kms_key,
-        )
 
         job_connection = glue.Connection(
             self,
@@ -131,7 +125,7 @@ class GlueStack(cdk.Stack):
             glue_version='2.0',
             max_retries=0,
             number_of_workers=5,
-            role=glue_role.role_arn,
+            role='arn:aws:iam::634935009001:role/glue-role',
             worker_type='G.1X',
         )
 
@@ -162,7 +156,7 @@ class GlueStack(cdk.Stack):
             glue_version='2.0',
             max_retries=0,
             number_of_workers=5,
-            role=glue_role.role_arn,
+            role='arn:aws:iam::634935009001:role/glue-role',
             worker_type='G.1X',
         )
 
